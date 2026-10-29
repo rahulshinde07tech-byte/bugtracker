@@ -1,0 +1,161 @@
+export const defaultApps = [
+  {
+    id: "app-1",
+    name: "E-Commerce Web Store",
+    url: "https://shop.example.com",
+    environment: "Production",
+    platform: "Web / Mobile Web",
+    description: "Customer-facing online storefront and checkout funnel.",
+    color: "#6366f1",
+    icon: "🛒"
+  },
+  {
+    id: "app-2",
+    name: "Corporate Marketing Landing",
+    url: "https://example.com",
+    environment: "Production",
+    platform: "Web Desktop/Mobile",
+    description: "Main corporate website, lead capture forms, and pricing page.",
+    color: "#10b981",
+    icon: "🌐"
+  },
+  {
+    id: "app-3",
+    name: "Customer Account Portal",
+    url: "https://portal.example.com",
+    environment: "Staging",
+    platform: "Single Page App",
+    description: "Subscriber dashboard, profile settings, and payment invoices.",
+    color: "#f59e0b",
+    icon: "👤"
+  },
+  {
+    id: "app-4",
+    name: "Warehouse & Delivery Mobile Web",
+    url: "https://ops.example.com",
+    environment: "Production",
+    platform: "Mobile Web PWA",
+    description: "Mobile web portal used by warehouse staff and dispatch drivers.",
+    color: "#ec4899",
+    icon: "📦"
+  }
+];
+
+export const defaultBugs = [
+  {
+    id: "BUG-101",
+    title: "Checkout payment button unresponsive on iOS Safari 17",
+    appId: "app-1",
+    appName: "E-Commerce Web Store",
+    severity: "Critical",
+    status: "Open",
+    category: "Functional",
+    environment: "Production",
+    deviceInfo: "iPhone 15 Pro, iOS 17.4, Mobile Safari (393x852)",
+    url: "/checkout/payment",
+    description: "When tapping 'Complete Order' button with Apple Pay selected, spinner activates but Stripe modal never triggers.",
+    screenshotUrl: "https://images.unsplash.com/photo-1556742049-0a67c5574f73?w=800&auto=format&fit=crop",
+    reporter: "Sarah Jenkins (QA)",
+    assignee: "Rahul",
+    createdAt: new Date(Date.now() - 3600000 * 4).toISOString(),
+    updatedAt: new Date(Date.now() - 3600000 * 2).toISOString()
+  },
+  {
+    id: "BUG-102",
+    title: "Hero banner text overlapping on 375px mobile screen width",
+    appId: "app-2",
+    appName: "Corporate Marketing Landing",
+    severity: "Medium",
+    status: "In Progress",
+    category: "UI/Visual",
+    environment: "Production",
+    deviceInfo: "iPhone SE 3rd Gen, Safari (375x667)",
+    url: "/",
+    description: "The heading 'Scale your business 10x faster' line-height causes overlap with the subheading on viewports below 400px.",
+    screenshotUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
+    reporter: "Alex Rivera",
+    assignee: "Rahul",
+    createdAt: new Date(Date.now() - 3600000 * 24).toISOString(),
+    updatedAt: new Date(Date.now() - 3600000 * 5).toISOString()
+  },
+  {
+    id: "BUG-103",
+    title: "Invoice PDF download returns 504 Gateway Timeout",
+    appId: "app-3",
+    appName: "Customer Account Portal",
+    severity: "High",
+    status: "Open",
+    category: "Performance",
+    environment: "Staging",
+    deviceInfo: "Chrome 122, macOS Sonoma (1440x900)",
+    url: "/billing/invoices/2026-10",
+    description: "Downloading past billing receipts takes over 30 seconds and fails with gateway timeout for customers with >100 line items.",
+    screenshotUrl: "",
+    reporter: "Marcus Brody",
+    assignee: "Alex",
+    createdAt: new Date(Date.now() - 3600000 * 12).toISOString(),
+    updatedAt: new Date(Date.now() - 3600000 * 12).toISOString()
+  },
+  {
+    id: "BUG-104",
+    title: "Barcode scanner camera permission crash on Android Chrome",
+    appId: "app-4",
+    appName: "Warehouse & Delivery Mobile Web",
+    severity: "Critical",
+    status: "In Progress",
+    category: "Functional",
+    environment: "Production",
+    deviceInfo: "Samsung Galaxy S23, Chrome Mobile 123 (360x780)",
+    url: "/scanner",
+    description: "If user previously denied camera permission, tapping 'Scan Parcel' throws unhandled Promise rejection and freezes app.",
+    screenshotUrl: "",
+    reporter: "David Chen (Ops Lead)",
+    assignee: "Sarah",
+    createdAt: new Date(Date.now() - 3600000 * 8).toISOString(),
+    updatedAt: new Date(Date.now() - 3600000 * 1).toISOString()
+  },
+  {
+    id: "BUG-105",
+    title: "Search bar autocomplete dropdown z-index behind product filter modal",
+    appId: "app-1",
+    appName: "E-Commerce Web Store",
+    severity: "Low",
+    status: "Resolved",
+    category: "UI/Visual",
+    environment: "Staging",
+    deviceInfo: "Pixel 8, Chrome Mobile 123",
+    url: "/products",
+    description: "When filtering products on mobile, typing into top search bar renders suggestion dropdown behind the filter overlay.",
+    screenshotUrl: "",
+    reporter: "Sarah Jenkins (QA)",
+    assignee: "Rahul",
+    createdAt: new Date(Date.now() - 3600000 * 48).toISOString(),
+    updatedAt: new Date(Date.now() - 3600000 * 6).toISOString()
+  },
+  {
+    id: "BUG-106",
+    title: "Contact sales form submits empty string when clicking twice quickly",
+    appId: "app-2",
+    appName: "Corporate Marketing Landing",
+    severity: "Medium",
+    status: "Closed",
+    category: "Functional",
+    environment: "Production",
+    deviceInfo: "All devices",
+    url: "/contact",
+    description: "Double clicking submit button fired duplicate requests. Added button debounce and form disable during in-flight submission.",
+    screenshotUrl: "",
+    reporter: "Rahul",
+    assignee: "Rahul",
+    createdAt: new Date(Date.now() - 3600000 * 72).toISOString(),
+    updatedAt: new Date(Date.now() - 3600000 * 18).toISOString()
+  }
+];
+
+export const defaultTeam = [
+  { id: "team-1", name: "Rahul", role: "Fullstack Lead", email: "rahul@example.com", avatar: "👨‍💻" },
+  { id: "team-2", name: "Sarah Jenkins", role: "QA Lead", email: "sarah@example.com", avatar: "👩‍🔬" },
+  { id: "team-3", name: "Alex Rivera", role: "Frontend Dev", email: "alex@example.com", avatar: "🎨" },
+  { id: "team-4", name: "Marcus Brody", role: "Backend Dev", email: "marcus@example.com", avatar: "⚙️" },
+  { id: "team-5", name: "Dev Team", role: "Triage / Unassigned", email: "dev-team@example.com", avatar: "👥" }
+];

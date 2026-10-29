@@ -1,0 +1,54 @@
+# ============================================
+# BugTracker Pro — Git Ignore Rules for Server & GitHub
+# ============================================
+
+# Dependencies (Never commit to GitHub)
+node_modules/
+*/node_modules/
+package-lock.json.bak
+
+# Secrets & Environment Variables (CRITICAL)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+service-account-key.json
+*service-account*.json
+*credentials*.json
+
+# Production Build outputs (Generated on server during build)
+dist/
+*/dist/
+build/
+*/build/
+
+# Logs & Runtime Process outputs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+
+# Operating System & Editor Junk
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Temporary / Scratch caches
+tmp/
+temp/
+.cache/
